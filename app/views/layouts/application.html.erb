@@ -21,13 +21,15 @@
       <row class="row">
 
          <div  class=" col-sm-9 col-lg-10" >
-<br/><br/><br/>
+          <br/><br/><br/>
                  <%= render 'layouts/flash' %>
           <%= yield %>
          </div>
-         <div  class=" col-sm-3 col-lg-2" style='border-left: 1px solid white'>
-           <br/>
-           <%= render 'layouts/sidebar' %>
+         <div class=" col-sm-3 col-lg-2"  style="padding-top: 80px;" >
+         
+            <div  style='border-left: 1px solid white; height: 480px;'>
+                 <%= render 'layouts/sidebar' %>
+             </div>
          </div> 
          
       </row>
