@@ -1,0 +1,39 @@
+
+	
+
+	
+	
+ <h2><%=@article.title %></h2>
+
+<%= @article.description%><br/><br/>
+<br/>
+<% if link_for_edit? @article %>
+<%= link_to 'Edit article',edit_article_path(@article) %>&nbsp;|
+<%= link_to 'Delete article',article_path(@article) ,method: 'delete', data: {confirm: 'do you want to delete?'} %>
+<% end %>
+
+<br/>
+<hr>
+<% @comments.each do |comment| %>
+<!-- User.find(comment.user_id).username -->
+
+<i><%= link_to  comment.user.username,article_comment_path(@article,comment) %></i> 
+<br/>
+<div >
+<%= comment.body %><br/>
+<br>
+<%= comment.created_at %>
+<hr>
+</div>
+<%end %>
+
+
+<div >
+
+ <br/>
+
+<%= link_to 'add comment',new_article_comment_path(@article), class: 'btn btn-success' %>
+
+	</div>
+
+

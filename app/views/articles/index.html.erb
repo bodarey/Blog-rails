@@ -1,0 +1,28 @@
+<div class="container-fluid">
+	
+<div class="row">
+	
+	<div class="col-md-1"></div>
+	<div class="col-md-8">
+ <% puts  session[:user_id] %>
+<div style='width: 60%; '>
+<h3><%=pluralize @articles.count, 'article' %></h3>
+
+<%@articles.each do |article| %>
+<p><h3><%= link_to article.title,article %></h3></p> 
+<p><%=truncate article.description, length:100,separator: ' ' %></p> 
+<p>created by <b> <%=article.user.username%></b> on <i> <%=article.created_at %></i>
+
+
+
+</p>
+
+<hr>
+<%end%>
+
+</div>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+
+</div>

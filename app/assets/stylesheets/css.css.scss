@@ -1,0 +1,82 @@
+@import 'colors';
+
+body
+{
+  //background-color: #e3e3e3;
+/*background-color: #ADD;*/
+background: url(blog.jpg) no-repeat ;
+  background-attachment: fixed;
+
+}
+.fifty {
+
+	width: 400px;
+}
+.block {
+
+	border: 2px solid #dee2e6;
+}
+
+#error{
+	width: 640px;
+	background-color: #d1dcf0;
+	color: rgba(255, 51, 0, 0.603);
+}
+#form{
+	padding-left: 10px;
+	width: 650px;
+	background-color: #d1dcf0;
+}
+.flash {
+  color: $primary-text-color;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: #ffc 0 0 4px;
+  
+  &.notice {
+    color: red;
+    //background-color: $flash-notice-color;
+  }
+
+  &.alert {
+  //  background-color: $flash-alert-color;
+  color: red;
+  }
+}
+
+
+
+
+.leftt{
+	padding-left: 10px;
+
+}
+
+.star{
+
+  display: inline-block;
+}
+.bold{
+ font-size: larger;
+ font-weight: bold;
+}
+.field_with_errors label{
+
+  color:red;
+}
+
+
+#sidebar{
+  float: left;
+}
+
+.logitem{
+
+  text-align:right;
+}
+.center{
+ text-align:center; 
+}

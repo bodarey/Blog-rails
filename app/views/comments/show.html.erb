@@ -1,0 +1,29 @@
+<div class="container-fluid">
+	
+<div class="row">
+	
+	<div class="col-md-1"></div>
+	<div class="col-md-8">
+Title: <br/><%=@article.title %><br/><br/>
+
+Description: <br/><%= truncate(@article.description, length: 35, separator: ' ') %><br/><br/>
+
+
+<hr>
+comment:<br/>
+<%= @comment.body%><br/>
+
+<i><%= @comment.user_name %></i> |
+<%= @comment.created_at %>
+<br/><br/>
+ <%= link_to("all comments", @article ) %>
+<br/><br/>
+<% if link_for_edit_comment? @comment%>
+<%= link_to 'Edit comment',edit_article_comment_path(@article,@comment), class: 'btn btn-success' %>
+<%= link_to 'Delete comment', article_comment_path(@article,@comment), method: 'delete',class: 'btn btn-success', data: {confirm: 'do you want to delete?'} %>
+<% end %>
+</div>
+	<div class="col-md-3"></div>
+</div>
+
+</div>

@@ -1,0 +1,18 @@
+
+		<div >
+	 <%= render 'shared/errors',object: @comment  %>
+<%= form_for ([@article,@comment]) do |f|%>
+	<table  >
+<tr >
+</tr></tr>
+
+<tr><td>comment: </td></tr><tr><td> <%= f.text_area :body, cols:70,rows:6 %></td></tr></tr>
+
+<tr><td >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;    
+ <button type="submit" class="btn btn-primary">Submit</button>
+</tr>
+</table>
+<% end %>
+
+
+</div>
